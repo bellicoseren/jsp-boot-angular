@@ -27,5 +27,6 @@ nbdist/
 .DS_Store
 
 ### Mvn ###
+.mvn/wrapper
 mvnw
 mvnw.cmd
