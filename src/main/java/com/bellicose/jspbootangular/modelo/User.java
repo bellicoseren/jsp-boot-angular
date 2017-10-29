@@ -1,14 +1,27 @@
 package com.bellicose.jspbootangular.modelo;
 
-public class User {
+import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class User implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	private String username;
 	private String address;
 	private String email;
 	
 	public User(){
-		id = 0;
 	}
 	public User(long id, String username, String address, String email){
 		this.id=id;
